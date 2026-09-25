@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siloé Store & Services</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f5f7fb;color:#172033}
+header{background:#111827;color:white;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.logo{font-size:22px;font-weight:800}.logo span{color:#38bdf8}
+nav a{color:white;text-decoration:none;margin-left:18px;font-size:14px}
+.hero{padding:70px 6%;background:linear-gradient(135deg,#111827,#1e3a5f);color:white}
+.hero h1{font-size:42px;max-width:650px;margin-bottom:15px}.hero p{font-size:18px;max-width:600px;color:#dbeafe;margin-bottom:25px}
+.btn{display:inline-block;padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:700;border:0;cursor:pointer}
+.primary{background:#38bdf8;color:#082f49}.secondary{background:white;color:#111827;margin-left:8px}
+section{padding:45px 6%}.title{font-size:28px;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;border-radius:16px;padding:22px;box-shadow:0 5px 18px #00000010}
+.icon{font-size:34px;margin-bottom:12px}.card h3{margin-bottom:8px}.card p{color:#667085;line-height:1.5}
+.price{font-weight:800;font-size:20px;margin:15px 0}
+.order{background:#e0f2fe;border-radius:18px;padding:28px}
+form{display:grid;gap:12px;max-width:650px}input,textarea,select{padding:13px;border:1px solid #cbd5e1;border-radius:9px;font-size:15px}
+textarea{min-height:110px}
+footer{background:#111827;color:#cbd5e1;text-align:center;padding:28px}
+@media(max-width:700px){.hero h1{font-size:32px}nav{display:none}.secondary{margin-left:0;margin-top:8px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Siloé<span>Store</span></div>
+  <nav><a href="#produtos">Produtos</a><a href="#servicos">Serviços</a><a href="#pedido">Pedido</a><a href="#contacto">Contacto</a></nav>
+</header>
+
+<section class="hero">
+  <h1>Produtos, serviços e soluções num só lugar.</h1>
+  <p>Uma plataforma para comprar produtos digitais, contratar serviços e apresentar os teus trabalhos de forma profissional.</p>
+  <a class="btn primary" href="#produtos">Ver produtos</a>
+  <a class="btn secondary" href="#pedido">Pedir um serviço</a>
+</section>
+
+<section id="produtos">
+<h2 class="title">🛍️ Produtos</h2>
+<div class="grid">
+  <div class="card"><div class="icon">🎨</div><h3>Designs e Criativos</h3><p>Artes para redes sociais, publicidade, capas e marcas.</p><div class="price">A partir de 5.000 Kz</div></div>
+  <div class="card"><div class="icon">📘</div><h3>Produtos Digitais</h3><p>E-books, documentos, modelos e outros materiais digitais.</p><div class="price">A partir de 3.000 Kz</div></div>
+  <div class="card"><div class="icon">🎬</div><h3>Vídeos</h3><p>Vídeos para TikTok, Facebook, YouTube e publicidade.</p><div class="price">A partir de 7.500 Kz</div></div>
+  <div class="card"><div class="icon">💻</div><h3>Projetos Digitais</h3><p>Sites, páginas e soluções digitais personalizadas.</p><div class="price">Sob orçamento</div></div>
+</div>
+</section>
+
+<section id="servicos">
+<h2 class="title">💼 Serviços</h2>
+<div class="grid">
+  <div class="card"><div class="icon">🎨</div><h3>Design Gráfico</h3><p>Logotipos, flyers, banners, capas e identidade visual.</p></div>
+  <div class="card"><div class="icon">🎥</div><h3>Edição de Vídeo</h3><p>Edição e melhoria de vídeos para redes sociais.</p></div>
+  <div class="card"><div class="icon">📱</div><h3>Redes Sociais</h3><p>Conteúdo visual e apoio para presença digital.</p></div>
+  <div class="card"><div class="icon">🌍</div><h3>Tradução</h3><p>Tradução e adaptação de conteúdos em português e outros idiomas.</p></div>
+  <div class="card"><div class="icon">🌐</div><h3>Criação de Sites</h3><p>Sites modernos para pessoas, negócios, projetos e organizações.</p></div>
+  <div class="card"><div class="icon">📣</div><h3>Marketing Digital</h3><p>Materiais e estratégias para divulgação online.</p></div>
+</div>
+</section>
+
+<section id="pedido">
+<h2 class="title">📦 Fazer um pedido</h2>
+<div class="order">
+<form onsubmit="enviarPedido(event)">
+<input id="nome" placeholder="Seu nome" required>
+<input id="contactoForm" placeholder="WhatsApp ou contacto" required>
+<select id="tipo"><option>Quero comprar um produto</option><option>Quero contratar um serviço</option><option>Quero pedir um orçamento</option></select>
+<textarea id="detalhes" placeholder="Explique o que você precisa..." required></textarea>
+<button class="btn primary" type="submit">Enviar pedido</button>
+</form>
+<p id="msg" style="margin-top:15px;font-weight:bold"></p>
+</div>
+</section>
+
+<section id="contacto">
+<h2 class="title">📞 Contacto</h2>
+<div class="card"><p><b>WhatsApp:</b> adicionar depois</p><p style="margin-top:8px"><b>E-mail:</b> adicionar depois</p><p style="margin-top:8px"><b>Redes sociais:</b> adicionar depois</p></div>
+</section>
+
+<footer>
+<p>© 2026 Siloé Store & Services — Todos os direitos reservados.</p>
+</footer>
+
+<script>
+function enviarPedido(e){
+ e.preventDefault();
+ const nome=document.getElementById('nome').value;
+ const tipo=document.getElementById('tipo').value;
+ document.getElementById('msg').textContent="Pedido preparado, "+nome+"! Tipo: "+tipo+". Agora podemos ligar este formulário ao teu WhatsApp ou sistema de pagamentos.";
+}
+</script>
+</body>
+</html>
